@@ -1,40 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Electron Desktop App
+
+This project combines the power of Next.js with Electron.js to create a desktop application for PC and Mac environments. The purpose of this application is to provide users with a set of common tools that can be utilized conveniently on their desktops.
+
+## Features
+
+### Currency Converter
+
+- Convert between different currencies quickly and easily.
+- Provides up-to-date exchange rates fetched from reliable sources.
+
+### JSON Formatter
+
+- Format JSON data in a readable and organized manner.
+- Supports large JSON files for efficient data handling.
 
 ## Getting Started
 
-First, run the development server:
+To get started with this project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the Repository**:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/your-username/nextjs-electron-desktop-app.git
+   ```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+2. **Install Dependencies**:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+   ```bash
+   cd nextjs-electron-desktop-app
+   npm install
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. **Run the Application**:
+   - To run the application in development mode:
+     ```bash
+     npm run dev
+     ```
+   - To build the application for production:
+     ```bash
+     npm run build
+     npm run electron
+     ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
 
-## Learn More
+Once the application is running, you can access the following tools:
 
-To learn more about Next.js, take a look at the following resources:
+### Currency Converter
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Select the currencies you want to convert between.
+2. Enter the amount you wish to convert.
+3. Instantly see the converted amount.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### JSON Formatter
 
-## Deploy on Vercel
+1. Paste your JSON data into the provided text area.
+2. Click on the "Format" button.
+3. View the formatted JSON output below.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions to improve this project are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes.
+4. Test your changes thoroughly.
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify it as needed.
+
+## Acknowledgements
+
+- This project was made possible by the amazing communities of Next.js and Electron.js.
+- Special thanks to [insert name here] for their contributions and suggestions.
+
+## Support
+
+If you encounter any issues or have any questions, feel free to [open an issue](https://github.com/your-username/nextjs-electron-desktop-app/issues) on GitHub. We're here to help!
