@@ -50,8 +50,18 @@ export const SideNavContainer = (props: Props) => {
       {/* Menu */}
       <div className="h-screen w-20 bg-[#f1f4ff] z-20 py-5 border-r border-[#cdcdcd]">
         <div className="flex flex-col items-center">
+          <NavItem
+            type="all"
+            title="All"
+            icon={<IconLayoutDashboard />}
+            href="/"
+            onMouseEnter={() =>
+              !clickKeepShowSubMenu ? setSelectedGroup("") : null
+            }
+          />
           {props.currentItem ? (
             <div className="flex flex-col items-center">
+              <div className="border-b border-[#cdcdcd] w-12 mb-4"></div>
               <NavItem
                 type="current"
                 title={props.currentItem.name}
@@ -60,12 +70,6 @@ export const SideNavContainer = (props: Props) => {
               <div className="border-b border-[#cdcdcd] w-12 mb-4"></div>
             </div>
           ) : null}
-          <NavItem
-            type="all"
-            title="All"
-            icon={<IconLayoutDashboard />}
-            href="/"
-          />
           {toolsData.map((item, index) => (
             <NavItem
               key={index}
