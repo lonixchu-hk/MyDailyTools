@@ -62,7 +62,7 @@ export const SideNavContainer = (props: Props) => {
             type="all"
             title="All"
             icon={<IconLayoutDashboard />}
-            href="/tools/all"
+            href="/"
           />
           {toolsData.map((item, index) => (
             <NavItem
@@ -94,30 +94,32 @@ export const SideNavContainer = (props: Props) => {
       >
         {/* Sub Menu */}
         <div
-          className=" h-screen w-20 bg-[#f1f4ff] z-20 p-2 py-5 flex flex-col items-center"
+          className=" h-screen w-60 bg-[#f1f4ff] z-20 p-2 py-5"
           onMouseEnter={() => enterMenuItem(hoverMenu)}
         >
-          {toolsData.map((item, index) =>
-            hoverMenu == item.name
-              ? item.tools.map((subItem, index) => (
-                  <NavItem
-                    key={index}
-                    type="item"
-                    title={subItem.name}
-                    icon={subItem.icon}
-                    currentItem={
-                      props.currentItem ? props.currentItem.name : ""
-                    }
-                    onClick={() => {
-                      setClickKeepShowSubMenu(false);
-                      setShowSubMenu(false);
-                      setHoverMenu(null);
-                    }}
-                    href={subItem.href}
-                  />
-                ))
-              : null
-          )}
+          <div className="w-full grid grid-cols-2">
+            {toolsData.map((item, index) =>
+              hoverMenu == item.name
+                ? item.tools.map((subItem, index) => (
+                    <NavItem
+                      key={index}
+                      type="item"
+                      title={subItem.name}
+                      icon={subItem.icon}
+                      currentItem={
+                        props.currentItem ? props.currentItem.name : ""
+                      }
+                      onClick={() => {
+                        setClickKeepShowSubMenu(false);
+                        setShowSubMenu(false);
+                        setHoverMenu(null);
+                      }}
+                      href={subItem.href}
+                    />
+                  ))
+                : null
+            )}
+          </div>
         </div>
         {/* buffer */}
         <div className="h-screen w-20" />

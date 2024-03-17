@@ -11,7 +11,7 @@ export const TitleBar = (props: Props) => {
     <div className="h-12 w-full bg-[#f1f4ff] border-b border-[#ededed] flex items-center justify-start px-5">
       {props.currentItem
         ? `${props.currentGroup} > ${props.currentItem.name}`
-        : null}
+        : "Welcome to Tools Center!"}
     </div>
   );
 };
