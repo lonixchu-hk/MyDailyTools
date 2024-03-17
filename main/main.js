@@ -15,6 +15,7 @@ const createWindow = () => {
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
+    resizable: false,
   });
 
   win.setMenu(null);

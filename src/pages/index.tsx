@@ -11,7 +11,7 @@ export default function Home() {
       {toolsData.map((item, index) => (
         <div className="tool-dashboard-section w-full" key={index}>
           <h1>{item.name}</h1>
-          <div className="grid grid-cols-4 md:grid-cols-2 mt-5">
+          <div className="grid grid-cols-4 md:grid-cols-8 mt-5">
             {item.tools.map((subItem, subIndex) => (
               <NavItem
                 key={subIndex}
