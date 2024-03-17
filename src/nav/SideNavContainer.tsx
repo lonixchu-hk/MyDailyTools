@@ -30,7 +30,7 @@ export const SideNavContainer = (props: Props) => {
   useEffect(() => {
     if (selectedGroup == "" && !clickKeepShowSubMenu) {
       setShowSubMenu(false);
-      setHoverMenu(null);
+      // setHoverMenu(null);
     } else {
       setShowSubMenu(true);
       setHoverMenu(selectedGroup);
@@ -40,11 +40,13 @@ export const SideNavContainer = (props: Props) => {
   useEffect(() => {
     if (!clickKeepShowSubMenu) {
       setSelectedGroup("");
+    } else {
+      setSelectedGroup(hoverMenu ?? "");
     }
   }, [clickKeepShowSubMenu]);
 
   return (
-    <div>
+    <div onMouseLeave={() => setSelectedGroup("")}>
       {/* Menu */}
       <div className="h-screen w-20 bg-[#f1f4ff] z-20 py-5 border-r border-[#cdcdcd]">
         <div className="flex flex-col items-center">
@@ -94,12 +96,12 @@ export const SideNavContainer = (props: Props) => {
       >
         {/* Sub Menu */}
         <div
-          className=" h-screen w-60 bg-[#f1f4ff] z-20 p-2 py-5"
+          className=" h-screen w-60 min-w-60 bg-[#f1f4ff] z-20 p-2 py-5"
           onMouseEnter={() => enterMenuItem(hoverMenu)}
         >
           <div className="w-full grid grid-cols-2">
             {toolsData.map((item, index) =>
-              hoverMenu == item.name
+              hoverMenu == item.name && showSubMenu
                 ? item.tools.map((subItem, index) => (
                     <NavItem
                       key={index}
@@ -125,7 +127,7 @@ export const SideNavContainer = (props: Props) => {
         <div className="h-screen w-20" />
         {/* overlay */}
         <div
-          className="h-screen w-[calc(100%-5rem)]"
+          className="h-screen w-full"
           onClick={() => {
             setClickKeepShowSubMenu(false);
           }}

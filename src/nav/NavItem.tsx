@@ -16,9 +16,9 @@ interface Props {
 
 export const NavItem = (props: Props) => {
   return (
-    <div className="w-full h-fit">
+    <div className="w-full h-fit flex justify-center items-center">
       <Link
-        className={`mb-4 px-2 flex flex-col justify-center items-center ${
+        className={`w-fit mb-4 px-2 flex flex-col justify-center items-center ${
           props.type == "current" ? "disabled" : ""
         }`}
         href={props.href ? props.href : "#"}
