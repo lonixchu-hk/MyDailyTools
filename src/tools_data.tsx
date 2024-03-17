@@ -4,10 +4,14 @@ import {
   IconCoins,
   IconMoneybag,
 } from "@tabler/icons-react";
-import { JsonFormatter } from "./pages/tools/json-formatter";
-import { CurrencyConverter } from "./pages/tools/currency-converter";
 
-const toolsData = [
+export interface ITool {
+  name: string;
+  icon: JSX.Element;
+  href: string;
+}
+
+export const toolsData = [
   {
     name: "Development",
     icon: <IconCode />,
@@ -15,7 +19,7 @@ const toolsData = [
       {
         name: "Json Formatter",
         icon: <IconJson />,
-        tool: <JsonFormatter />,
+        href: "/tools/json-formatter",
       },
     ],
   },
@@ -26,10 +30,8 @@ const toolsData = [
       {
         name: "Currency Converter",
         icon: <IconCoins />,
-        tool: <CurrencyConverter />,
+        href: "/tools/currency-converter",
       },
     ],
   },
 ];
-
-export default toolsData;

@@ -1,5 +1,5 @@
 import React from "react";
 
-export const JsonFormatter = () => {
-  return <div>JsonFormatterIndex</div>;
+export default () => {
+  return <div></div>;
 };

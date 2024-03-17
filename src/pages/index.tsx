@@ -6,10 +6,5 @@ import { MainContent } from "./main";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return (
-    <main className={`h-screen w-screen flex ${inter.className}`}>
-      <SideNavContainer />
-      <MainContent />
-    </main>
-  );
+  return <div>Welcome to Tools Center</div>;
 }
