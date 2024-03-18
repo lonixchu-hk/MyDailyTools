@@ -1,72 +1,55 @@
-# Next.js Electron Desktop App
+# Common Tools Desktop App - MyDailyTools
 
-This project combines the power of Next.js with Electron.js to create a desktop application for PC and Mac environments. The purpose of this application is to provide users with a set of common tools that can be utilized conveniently on their desktops.
-
-## Features
-
-### Currency Converter
-
-- Convert between different currencies quickly and easily.
-- Provides up-to-date exchange rates fetched from reliable sources.
-
-### JSON Formatter
-
-- Format JSON data in a readable and organized manner.
-- Supports large JSON files for efficient data handling.
-
-## Getting Started
-
-To get started with this project, follow these steps:
-
-1. **Clone the Repository**:
-
-   ```bash
-   git clone https://github.com/your-username/nextjs-electron-desktop-app.git
-   ```
-
-2. **Install Dependencies**:
-
-   ```bash
-   cd nextjs-electron-desktop-app
-   npm install
-   ```
-
-3. **Run the Application**:
-   - To run the application in development mode:
-     ```bash
-     npm run dev
-     ```
-   - To build the application for production:
-     ```bash
-     npm run build
-     npm run electron
-     ```
-
-## Usage
-
-Once the application is running, you can access the following tools:
-
-### Currency Converter
-
-1. Select the currencies you want to convert between.
-2. Enter the amount you wish to convert.
-3. Instantly see the converted amount.
-
-### JSON Formatter
-
-1. Paste your JSON data into the provided text area.
-2. Click on the "Format" button.
-3. View the formatted JSON output below.
+This open-source project serves as a container for Electron.js applications. Contributors can add tools to this project by creating a folder in the `src/pages/tools` directory. Each tool should have an `index.tsx` file serving as its entry point.
 
 ## Contributing
 
-Contributions to improve this project are welcome! To contribute:
+Contributions to add new tools to this project are welcome! To contribute:
 
 1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes.
-4. Test your changes thoroughly.
-5. Submit a pull request.
+2. Create a new folder in the `src/pages/tools` directory for your tool.
+3. Inside the tool folder, create an `index.tsx` file as the entry point for your tool.
+4. Update the `toolsData` object in `src/tools_data.tsx` to include information about your tool.
+
+Only pull requests with fully-functional tools will be accepted.
+
+## Existing Tools
+
+- **Currency Converter** (Under Development)
+  - Description: Tool for converting between different currencies.
+- **JSON Formatter** (Under Development)
+  - Description: Tool for formatting JSON data in a readable manner.
+
+## Adding a Tool
+
+To add a new tool to this project, follow these steps:
+
+1. **Create a Tool Folder**:
+
+   - Navigate to the `src/pages/tools` directory.
+   - Create a new folder for your tool.
+
+2. **Create Entry Point**:
+
+   - Inside the tool folder, create an `index.tsx` file.
+   - This file will serve as the entry point for your tool.
+
+3. **Update `toolsData` Object**:
+
+   - Open `src/tools_data.tsx`.
+   - Add an entry for your tool in the `toolsData` object, providing information such as the tool name, description, and any other relevant details.
+
+4. **Test Your Tool**:
+
+   - Run the application to ensure your tool works as expected.
+   - You can run the application using the following commands:
+     ```bash
+     npm install
+     npm run dev
+     ```
+
+5. **Submit a Pull Request**:
+   - Once your tool is ready, submit a pull request to have it added to the project.
 
 ## License
 
@@ -74,9 +57,9 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 
 ## Acknowledgements
 
-- This project was made possible by the amazing communities of Next.js and Electron.js.
-- Special thanks to [insert name here] for their contributions and suggestions.
+- This project was made possible by the Electron.js community.
+- Special thanks to all contributors for their valuable contributions.
 
 ## Support
 
-If you encounter any issues or have any questions, feel free to [open an issue](https://github.com/your-username/nextjs-electron-desktop-app/issues) on GitHub. We're here to help!
+If you encounter any issues or have any questions, feel free to [open an issue](https://github.com/lonixchu-hk/MyDailyTools/issues) on GitHub. We're here to help!
