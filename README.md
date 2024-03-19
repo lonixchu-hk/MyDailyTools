@@ -2,6 +2,10 @@
 
 This open-source project serves as a container for Electron.js applications. Contributors can add tools to this project by creating a folder in the `src/pages/tools` directory. Each tool should have an `index.tsx` file serving as its entry point.
 
+| Home Page                         | Tool Page                         |
+| --------------------------------- | --------------------------------- |
+| ![Home Page](images/homepage.png) | ![Tool Page](images/toolpage.png) |
+
 ## Contributing
 
 Contributions to add new tools to this project are welcome! To contribute:
